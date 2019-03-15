@@ -1,0 +1,15 @@
+To calculate Beta:
+
+1. volatility of market, stock
+2. Correlation/convariance between market and stock
+
+beta = (volatilityOfStock) * Corr(stock,market) / (volatilityOfMarket) = Cov(stock,market) / (volatilityOfMarket)^2
+
+To calculate the expected return:
+1. Risk free return
+2. Beta of stock
+3. Expected return of market
+
+expectedReturnStock = riskFreeRate + beta * (expectedReturnMarket - riskFreeRate);
+
+expectedReturnPortfolio = sumoff(expectedReturnStock*portfolioWeight)
