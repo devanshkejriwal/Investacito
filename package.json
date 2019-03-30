@@ -1,0 +1,23 @@
+{
+  "name": "capm-alexa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devanshkejriwal/CAPM-alexa.git"
+  },
+  "author": "devanshkejriwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devanshkejriwal/CAPM-alexa/issues"
+  },
+  "homepage": "https://github.com/devanshkejriwal/CAPM-alexa#readme",
+  "dependencies": {
+    "ask-sdk-core": "^2.5.1",
+    "ask-sdk-model": "^1.14.0"
+  }
+}
