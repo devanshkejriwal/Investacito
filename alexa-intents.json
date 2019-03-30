@@ -1,0 +1,128 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "investacito",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "expectedReturn",
+                    "slots": [
+                        {
+                            "name": "wantedReturn",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{wantedReturn}"
+                            ]
+                        },
+                        {
+                            "name": "currentReturn",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{currentReturn}"
+                            ]
+                        },
+                        {
+                            "name": "riskFreeRate",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{riskFreeRate}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "My current return portfolio gives me a return of {currentReturn} percent . The risk free rate is {riskFreeRate} percent. I want {wantedReturn} percent. What should I do",
+                        "The return I want is {wantedReturn} . My current return portfolio gives me a return of {currentReturn} and the risk free rate is {riskFreeRate}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "expectedReturn",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "wantedReturn",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1356057811282.659971013249"
+                            }
+                        },
+                        {
+                            "name": "currentReturn",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1356057811282.242721508496"
+                            }
+                        },
+                        {
+                            "name": "riskFreeRate",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1356057811282.351391086398"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1356057811282.659971013249",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the return you want to get from your new portfolio?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1356057811282.242721508496",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the expected return of your current portfolio"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1356057811282.351391086398",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the risk free rate in the country in which you're investing"
+                    }
+                ]
+            }
+        ]
+    }
+}
