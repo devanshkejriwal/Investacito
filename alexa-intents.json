@@ -30,6 +30,7 @@
                             "name": "wantedReturn",
                             "type": "AMAZON.NUMBER",
                             "samples": [
+                                "{wantedReturn} percent",
                                 "{wantedReturn}"
                             ]
                         },
@@ -37,20 +38,23 @@
                             "name": "currentReturn",
                             "type": "AMAZON.NUMBER",
                             "samples": [
+                                "{currentReturn} percent",
                                 "{currentReturn}"
                             ]
                         },
                         {
-                            "name": "riskFreeRate",
+                            "name": "stockReturn",
                             "type": "AMAZON.NUMBER",
                             "samples": [
-                                "{riskFreeRate}"
+                                "{stockReturn} percent",
+                                "{stockReturn}"
                             ]
                         }
                     ],
                     "samples": [
-                        "My current return portfolio gives me a return of {currentReturn} percent . The risk free rate is {riskFreeRate} percent. I want {wantedReturn} percent. What should I do",
-                        "The return I want is {wantedReturn} . My current return portfolio gives me a return of {currentReturn} and the risk free rate is {riskFreeRate}"
+                        "I need help with my portfolio",
+                        "My current return portfolio gives me a return of {currentReturn} percent . The stock I want to invest in has a return of {stockReturn} percent. I want {wantedReturn} percent. What should I do",
+                        "The return I want is {wantedReturn} . My current return portfolio gives me a return of {currentReturn} and the stock I want to invest in has a return of {stockReturn}"
                     ]
                 }
             ],
@@ -82,12 +86,12 @@
                             }
                         },
                         {
-                            "name": "riskFreeRate",
+                            "name": "stockReturn",
                             "type": "AMAZON.NUMBER",
                             "confirmationRequired": false,
                             "elicitationRequired": true,
                             "prompts": {
-                                "elicitation": "Elicit.Slot.1356057811282.351391086398"
+                                "elicitation": "Elicit.Slot.1513706548159.942473890109"
                             }
                         }
                     ]
@@ -120,6 +124,15 @@
                     {
                         "type": "PlainText",
                         "value": "What is the risk free rate in the country in which you're investing"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1513706548159.942473890109",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is the rate of return of the stock you want to invest in?"
                     }
                 ]
             }
