@@ -14,10 +14,8 @@ const LaunchRequestHandler = {
     handle(handlerInput) {
         //welcome message
         let speechText = `Welcome to Investacito. I will tell you how to make an
-        efficient portfolio AKA tangent portfolio with the return of your choice by
-        adding the stock of your choice into your portfolio efficently.You can say the return I want is 30%, My current
-        portfolio gives me a return of 20% and the stock I want to invest in has a return of 40% and
-        I'll tell you the ratio of your investments`;
+        efficient portfolio to get your desired return by combining stocks with your portfolio.
+        All you have to say is i need help with my portfolio.`;
         //welcome screen message
         let displayText = "Welcome to Investacito"
         return handlerInput.responseBuilder
@@ -48,22 +46,22 @@ const ExpectedReturnIntentHandler = {
       let x = (parseInt(wantedReturn) - parseInt(stockReturn))/(parseInt(currentReturn) - parseInt(stockReturn));
 
       if(x>1) {
-        let value1 = parseInt(x)*100;
-        let value2 = (1-parseInt(x))*100;
+        let value1 = x*100;
+        let value2 = (1-x)*100;
         speechText = `For every 100 dollars, invest ${value1} dollars in your current portfolio
                       and short ${value2} dollars worth of the second stock`;
         displayText = `For every 100 dollars, invest ${value1} dollars in your current portfolio
                       and short ${value2} dollars worth of the second stock`;
       } else if (x<0) {
-        let value1 = parseInt(x)*100;
-        let value2 = (1-parseInt(x))*100;
+        let value1 = x*100;
+        let value2 = (1-x)*100;
         speechText = `For every 100 dollars, short ${value1} dollars worth of your current portfolio
                       and invest ${value2} dollars in the second stock`;
         displayText = `For every 100 dollars, short ${value1} dollars worth of your current portfolio
                        and invest ${value2} dollars in the second stock`;
       } else {
-        let value1 = parseInt(x)*100;
-        let value2 = (1-parseInt(x))*100;
+        let value1 = x*100;
+        let value2 = (1-x)*100;
         speechText = `For every 100 dollars, invest ${value1} dollars in your current portfolio
                       and invest ${value2} dollars in the second stock`;
         displayText = `For every 100 dollars, invest ${value1} dollars in your current portfolio

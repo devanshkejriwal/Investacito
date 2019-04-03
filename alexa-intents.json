@@ -53,8 +53,8 @@
                     ],
                     "samples": [
                         "I need help with my portfolio",
-                        "My current return portfolio gives me a return of {currentReturn} percent . The stock I want to invest in has a return of {stockReturn} percent. I want {wantedReturn} percent. What should I do",
-                        "The return I want is {wantedReturn} . My current return portfolio gives me a return of {currentReturn} and the stock I want to invest in has a return of {stockReturn}"
+                        "My current return portfolio gives me a return of {currentReturn} percent  The stock I want to invest in has a return of {stockReturn} percent I want {wantedReturn} percent What should I do",
+                        "The return I want is {wantedReturn}  My current return portfolio gives me a return of {currentReturn} and the stock I want to invest in has a return of {stockReturn}"
                     ]
                 }
             ],
