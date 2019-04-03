@@ -1,7 +1,7 @@
 This portfolio is called the tangent portfolio. It is the most effiecent portfolio on the market with the highest sharpe ratio
 
 Its based on financial formulas like the CAPM
-Expected return of the "complete portfolio" = x(Expected return of asset/portfolio) + (1-x)*(risk free rate)
+Expected return of the "complete portfolio"/wantedReturn = x(Expected return of asset/portfolio/currentReturn) + (1-x)*(return of stock wanted to buy)
 
 New Volatility = x* volatilty of asset/portfolio
 
